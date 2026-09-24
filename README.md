@@ -22,9 +22,6 @@ Employee Ops Dashboard lets an organization manage its people and day-to-day ope
 
 > **Ownership at a glance:** the backend (API design, authentication, authorization, data layer) is my own work. The web frontend was generated with AI tools and connected to my API. Details in [The frontend](#-the-frontend-built-with-tools).
 
-<!-- TODO: add 1-2 screenshots from /screenshots, e.g.
-<p align="center"><img src="screenshots/dashboard.png" width="85%" alt="Dashboard"></p>
--->
 
 ### Key features
 
