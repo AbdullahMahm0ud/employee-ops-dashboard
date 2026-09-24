@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "StaffPulse",
+      "hasCanvas": false,
+      "bodyTextLen": 28,
+      "bodyTextHash": "1bed141f02e9214b439199624650b3c317a69bf2ab016dcbcbeb7e2e21a1262c",
+      "bodyTextPrefix": "StaffPulse Opening the desk…",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "StaffPulse",
+      "hasCanvas": false,
+      "bodyTextLen": 28,
+      "bodyTextHash": "1bed141f02e9214b439199624650b3c317a69bf2ab016dcbcbeb7e2e21a1262c",
+      "bodyTextPrefix": "StaffPulse Opening the desk…",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

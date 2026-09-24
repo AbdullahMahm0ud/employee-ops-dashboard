@@ -1,0 +1,1 @@
+import{a as e,t}from"./useNavigate-DrqvhG58.js";import{i as n,n as r,t as i}from"./login-screen-B8W-aLKE.js";var a=e();function o(){let{user:e,isPending:o}=n();return o?(0,a.jsx)(i,{}):e?(0,a.jsx)(t,{to:`/`}):(0,a.jsx)(r,{})}export{o as component};
