@@ -3,7 +3,7 @@ import { StaffPulseMark } from "@/components/mark";
 import { PersonAvatar } from "@/components/person-avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { GROK_PROVIDERS, authClient, authEnabled, signIn } from "@/lib/auth/client";
+import { authClient, authEnabled } from "@/lib/auth/client";
 import { SEED_EMPLOYEES } from "@/lib/staff/seed";
 
 export function LoginScreen() {
@@ -56,22 +56,6 @@ export function LoginScreen() {
 
           {authEnabled ? (
             <div className="mt-6 space-y-3">
-              {GROK_PROVIDERS.map((provider) => (
-                <Button
-                  key={provider.providerId}
-                  type="button"
-                  variant="outline"
-                  className="w-full"
-                  onClick={() => signIn(provider.providerId, { callbackURL: "/" })}
-                >
-                  Continue with {provider.label}
-                </Button>
-              ))}
-              <div className="flex items-center gap-3 py-2 text-xs text-faint">
-                <span className="h-px flex-1 bg-line" />
-                or email
-                <span className="h-px flex-1 bg-line" />
-              </div>
               <EmailAuthForm />
             </div>
           ) : (
@@ -142,27 +126,27 @@ function EmailAuthForm() {
           <Input value={name} onChange={(e) => setName(e.target.value)} autoComplete="name" />
         </label>
       ) : null}
-        <label className="block">
-          <span className="mb-1.5 block text-sm font-medium text-ink">Email</span>
-          <Input
-            required
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            autoComplete="email"
-          />
-        </label>
-        <label className="block">
-          <span className="mb-1.5 block text-sm font-medium text-ink">Password</span>
-          <Input
-            required
-            type="password"
-            minLength={8}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete={mode === "up" ? "new-password" : "current-password"}
-          />
-        </label>
+      <label className="block">
+        <span className="mb-1.5 block text-sm font-medium text-ink">Email</span>
+        <Input
+          required
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          autoComplete="email"
+        />
+      </label>
+      <label className="block">
+        <span className="mb-1.5 block text-sm font-medium text-ink">Password</span>
+        <Input
+          required
+          type="password"
+          minLength={8}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          autoComplete={mode === "up" ? "new-password" : "current-password"}
+        />
+      </label>
       {error ? <p className="text-sm text-danger">{error}</p> : null}
       <Button type="submit" className="w-full" disabled={busy}>
         {busy ? "Working…" : mode === "up" ? "Create account" : "Sign in with email"}
